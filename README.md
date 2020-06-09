@@ -5,6 +5,85 @@ This repository is only for tutorial purpose, which only contains a very simple 
 
 Screenshots from the Full version shader (not yet released):
 -------------------
+shader ON
+![screenshot](https://i.imgur.com/xJSzAMZ.png)
+shader OFF
+![screenshot](https://i.imgur.com/xqMkSKe.png)
+shader ON
+![screenshot](https://i.imgur.com/KGvkY3m.png)
+shader OFF
+![screenshot](https://i.imgur.com/0JiRa7k.png)
+
+SHADER ON
+![screenshot](https://i.imgur.com/utXF8Qq.png)
+![screenshot](https://i.imgur.com/oEsHSMM.png)
+BEFORE
+![screenshot](https://i.imgur.com/K6mZCcH.png)
+AFTER:
+![screenshot](https://i.imgur.com/hjEeAoM.png)
+see it in motion-> https://youtu.be/D9ocVzGJfI8
+---
+
+BEFORE
+![screenshot](https://i.imgur.com/JImt9l4.png)
+AFTER
+![screenshot](https://i.imgur.com/0oc1hFK.png)
+see it in motion-> https://youtu.be/KpRkxPnHuK0
+---
+BEFORE
+![screenshot](https://i.imgur.com/Ak6rFTp.png)
+AFTER
+![screenshot](https://i.imgur.com/6BTsiRF.png)
+(more shadow from trees)
+![screenshot](https://i.imgur.com/qSygREh.png)
+---
+
+BEFORE
+![screenshot](https://i.imgur.com/rXEDmiy.png)
+AFTER:
+![screenshot](https://i.imgur.com/J7F3vuC.png)
+see it in motion-> https://youtu.be/hUWacEQH6js
+---
+BEFORE
+
+![screenshot](https://i.imgur.com/kZFNunW.png)
+
+AFTER:
+
+![screenshot](https://i.imgur.com/mnm5uYS.png)
+
+BEFORE
+
+
+![screenshot](https://i.imgur.com/a9VUVgd.png)
+
+
+AFTER:
+
+
+![screenshot](https://i.imgur.com/VgSZMka.png)
+
+
+add 2D hair shadow & rim light
+
+
+![screenshot](https://i.imgur.com/KXdMhhv.png)
+
+
+
+
+see it in motion-> https://youtu.be/S67GlGAnvWA
+---
+
+---
+BEFORE
+![screenshot](https://i.imgur.com/ApJyl6p.png)
+AFTER:
+![screenshot](https://i.imgur.com/5GiKMUG.png)
+
+see it in motion-> https://youtu.be/M6FKoEiOAzU
+---
+-------------------
 BEFORE
 ![screenshot](https://i.imgur.com/FiuK1Cj.png)
 AFTER:
@@ -18,7 +97,6 @@ Night + StreetLight OFF
 ![screenshot](https://i.imgur.com/mJ1sjUm.png)
 see it in motion -> https://youtu.be/jDSnJmZrKPw
 ---
-
 BEFORE
 ![screenshot](https://i.imgur.com/U5ba2lM.png)
 AFTER
@@ -35,6 +113,7 @@ BEFORE
 AFTER
 ![screenshot](https://i.imgur.com/7Wjdp8W.png)
 see it in motion -> https://youtu.be/EgxiWPk-vaE
+
 ---
 BEFORE
 ![screenshot](https://i.imgur.com/5afc5z5.png)
@@ -119,20 +198,8 @@ For simplicity reason, I removed most of the features from the Full version shad
 When will the Full version toon lit shader release?
 -------------------
 We don't have ETA now, we are still working on it, here are some videos about the Full version toon lit shader:
-- https://youtu.be/uVI_QOioER4
-- https://youtu.be/YtAiCHBvZr0
-- https://youtu.be/QWB060rVjFI
-- https://youtu.be/URVgKT5c3PM
-- https://youtu.be/6Gx0LxByfWk
-- https://youtu.be/IP293mAmBCk
-- https://youtu.be/n_bFQ9GNhcM
-- https://youtu.be/HmuaWpL5Pi8
-- https://youtu.be/tNnqIP4NdV8 (current)
-- https://youtu.be/ZfSZOHTBypc (current)
-- https://youtu.be/cebGl_MaWnI (current)
-- https://youtu.be/Ty4DXLFqqDo (current)
-- https://youtu.be/EgxiWPk-vaE (current)
-- https://youtu.be/gcUCTLF5hwE (current)
+- https://youtu.be/hUWacEQH6js
+- https://www.youtube.com/channel/UCsvlGOZyqjd68ZUUmgqwj0g
 
 How to get a test character model?
 -------------------
@@ -193,5 +260,16 @@ https://youtu.be/IP293mAmBCk
 
 ![screenshot](https://i.imgur.com/lt45arW.png)
 ![screenshot](https://i.imgur.com/RcSz8H1.png)
+
+credits
+------------------------
+model's creator in shader demo image/video: 
+- https://i-fox.club/pcr/
+- https://sketchfab.com/3d-models/band-of-sisters-2f1c0626d4cf4fd286c4cf5d109f7a32
+- miHoYo - Honkai Impact 3
+- Kuro Game - Punishing: Grey Raven
+- Azur Lane: Crosswave
+- Sour式鏡音リン
+- Unity-Chan in asset store
 
 

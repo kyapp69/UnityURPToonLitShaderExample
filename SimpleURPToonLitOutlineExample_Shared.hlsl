@@ -6,7 +6,7 @@
 #define SimpleURPToonLitOutlineExample_Shared_Include
 
 // We don't have "UnityCG.cginc" in SRP/URP's package anymore, so:
-// Including the following two function is enough for shading with Universal Pipeline. Everything is included in them.
+// Including the following two hlsl files is enough for shading with Universal Pipeline. Everything is included in them.
 // Core.hlsl will include SRP shader library, all constant buffers not related to materials (perobject, percamera, perframe).
 // It also includes matrix/space conversion functions and fog.
 // Lighting.hlsl will include the light functions/data to abstract light constants. You should use GetMainLight and GetLight functions
@@ -37,7 +37,7 @@
 //subfix OS means object space (e.g. positionOS = position object space)
 //subfix WS means world space (e.g. positionWS = position world space)
 
-// all pass will share this Attributes struct
+// all pass will share this Attributes struct (define data needed from Unity app to our vertex shader)
 struct Attributes
 {
     float3 positionOS   : POSITION;
@@ -46,7 +46,7 @@ struct Attributes
     float2 uv           : TEXCOORD0;
 };
 
-// all pass will share this Varyings struct
+// all pass will share this Varyings struct (define data needed from our vertex shader to our fragment shader)
 struct Varyings
 {
     float2 uv                       : TEXCOORD0;
@@ -142,7 +142,7 @@ VertexShaderWorkSetting GetDefaultVertexShaderWorkSetting()
 float3 TransformPositionOSToOutlinePositionOS(Attributes input)
 {
     float3 outlineNormalOSUnitVector = normalize(input.normalOS); //normalize, just in case model's data is incorrect
-    return input.positionOS + outlineNormalOSUnitVector * _OutlineWidth; //you can replace it to your own method!
+    return input.positionOS + outlineNormalOSUnitVector * _OutlineWidth; //you can replace it to your own method! Here we will use the most simple method for tutorial reason, it is not the best method!
 }
 
 // if param "isOutline" is false = do regular MVP transform
@@ -227,10 +227,16 @@ half3 GetFinalEmissionColor(Varyings input)
 }
 void DoClipTestToTargetAlphaValue(half alpha) 
 {
+    //2020-6-8: disable to fix an iOS compile fail bug
+    /*
     if(_UseAlphaClipping)
     {   
         clip(alpha - _Cutoff);
     }
+    */
+
+    //2020-6-8: now temp use this method, it is not good, don't learn it, should convert this back to a normal shader_feature
+    clip(alpha - _Cutoff + (1.0001-_UseAlphaClipping));
 }
 SurfaceData InitializeSurfaceData(Varyings input)
 {
@@ -339,7 +345,7 @@ half4 ShadeFinalColor(Varyings input, bool isOutline)
     LightingData lightingData;
     lightingData.positionWS = input.positionWSAndFogFactor.xyz;
     lightingData.viewDirectionWS = SafeNormalize(GetCameraPositionWS() - lightingData.positionWS);  
-    lightingData.normalWS = input.normalWS;
+    lightingData.normalWS = normalize(input.normalWS); //interpolated normal is NOT unit vector
 
 #ifdef _MAIN_LIGHT_SHADOWS
     lightingData.shadowCoord = input.shadowCoord;
